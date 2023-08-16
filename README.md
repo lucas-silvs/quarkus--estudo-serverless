@@ -16,7 +16,7 @@ Para o lambda, será utilizado a biblioteca `quarkus-aws-lambda`, onde será cri
 #### Execução local
 
 ##### Configuração do banco de dados em Docker
-Para execução local, deve ser criado um container com o banco de dados MySQL, para isso, deve ser executado o comando abaixo:
+Para execução local, deve ser criado um container com o banco de dados MySQL, para isso, deve ser executado o comando abaixo na pasta `./mysql docker`:
 ```shell
 docker-compose up
 ```
