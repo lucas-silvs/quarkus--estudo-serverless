@@ -1,5 +1,6 @@
 package com.lucassilvs.reset_senha.domain.models;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public record UserModel(
@@ -8,7 +9,7 @@ public record UserModel(
         String nome,
         String email,
         String cpf,
-        Date dataNascimento,
+        LocalDateTime dataNascimento,
         String telefone,
         String senha
 

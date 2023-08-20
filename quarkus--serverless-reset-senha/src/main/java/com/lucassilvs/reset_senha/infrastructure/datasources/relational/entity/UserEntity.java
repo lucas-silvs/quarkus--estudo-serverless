@@ -10,6 +10,7 @@ import jakarta.persistence.Table;
 public class UserEntity extends PanacheEntityBase {
 
         @Id
+        private Long id;
         private String login;
         private String nome;
         private String email;
@@ -31,7 +32,11 @@ public class UserEntity extends PanacheEntityBase {
             this.senha = senha;
         }
 
-        public static UserEntity of(String login, String nome, String email, String cpf, String dataNascimento, String telefone, String senha) {
+    public Long getId() {
+        return id;
+    }
+
+    public static UserEntity of(String login, String nome, String email, String cpf, String dataNascimento, String telefone, String senha) {
             return new UserEntity(login, nome, email, cpf, dataNascimento, telefone, senha);
         }
 

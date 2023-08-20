@@ -14,11 +14,12 @@ public class UserPanacheRepository implements PanacheRepository<UserEntity> {
     EntityManager em;
 
     @Transactional
-    public void cadastrarUsuario(UserEntity novoUsuario) {
-        em.persist(novoUsuario);
-    }
-
     public UserEntity buscarPeloCpfCnpj(String cpf){
         return find("cpf", cpf).firstResult();
+    }
+
+    @Transactional
+    public boolean existByCpf(String cpf) {
+        return find("cpf", cpf).firstResultOptional().isPresent();
     }
 }

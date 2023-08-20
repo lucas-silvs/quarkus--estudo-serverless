@@ -9,6 +9,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'io.quarkus:quarkus-elytron-security-common'
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-arc'
     testImplementation 'io.quarkus:quarkus-junit5'
@@ -18,8 +19,18 @@ dependencies {
     // Quarkus AWS Lambda
     implementation 'io.quarkus:quarkus-amazon-lambda'
 
+    // Quarkus ORM Hibernate Panache
     implementation("io.quarkus:quarkus-hibernate-orm-panache")
     implementation("io.quarkus:quarkus-jdbc-mysql")
+
+    //Mapstruct
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+
+
+    //Quarkus Security
+    implementation 'io.quarkus.security:quarkus-security:2.0.2.Final'
+
 
 
 }
